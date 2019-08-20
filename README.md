@@ -1,5 +1,6 @@
 # Xerror
 
+At the end of August sample codes will be available : any contribution will be appreciated 
 scanning
 
 vulnerability Assesment (openVas, Nessus , Nexpose )  rest api avalable keys are available for further development
