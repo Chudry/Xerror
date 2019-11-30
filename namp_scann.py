@@ -2,7 +2,7 @@
 for     :  Xerro Tech Sol's
 web     :  0xError.com
 project :  Xerror: An Autumated Pentest Tool
-By      :  Ahsan ch 
+Author  :  Ahsan ch 
 on      :  11/28/2019 @5:15
 
 '''
