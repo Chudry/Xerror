@@ -4,6 +4,7 @@ web     :  0xError.com
 project :  Xerror: An Autumated Pentest Tool
 Author  :  Ahsan ch 
 on      :  11/28/2019 @5:15
+contact :  exploitmee@protonmail.com
 
 '''
 
