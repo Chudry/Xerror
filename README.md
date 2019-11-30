@@ -11,4 +11,4 @@ This project build under supervision of Xerror Tech Solutions.
 
 
 For more details : 
-      Chudry  - ecploitmee@protonmail.com
+      Chudry  - exploitmee@protonmail.com
