@@ -82,3 +82,32 @@ controler.setname("third name")
 controler.setrollnumber("333")
 
 # controler.printDetails()
+
+
+#out_put
+
+''' 
+student name = first,student rollnumber =33
+
+[*] update: name from ** first ** to  ** second_name **
+==> afterstudent 
+name = second_name,student rollnumber =33
+
+[*] update: name from ** second_name ** to  ** third name **
+==> after
+student name = third name,student rollnumber =33 
+
+
+[*]update: Rollnumber from ** 33 ** to ** 333 ** 
+==>after estudent name = 333,student rollnumber =33
+
+'''
+
+
+
+
+
+
+
+
+
