@@ -19,7 +19,7 @@ import os
 import shlex
 
 #change this to the IP address for a single host or whole class followed "/" e.g 192.168.0.1/24
-ip_address = "192.168.0.1/24"
+ip_address = "127.0.0.1"
 target_id = None
 task_id   = None
 report_id = None
@@ -31,9 +31,9 @@ report_id = None
 #Use the configuration for the scan , the prefered on is full and fast
 #config_id = "8715c877-47a0-438d-98a3-27c7a6ab2196"   #Discovery
 #config_id = "085569ce-73ed-11df-83c3-002264764cea"  #empty
-#config_id = "daba56c8-73ec-11df-a475-002264764cea"  #Full and fast
+config_id = "daba56c8-73ec-11df-a475-002264764cea"  #Full and fast
 #config_id = "698f691e-7489-11df-9d8c-002264764cea"  #Full and fast ultimate
-config_id = "708f25c4-7489-11df-8094-002264764cea"  #Full and very deep
+#config_id = "708f25c4-7489-11df-8094-002264764cea"  #Full and very deep
 #config_id = "74db13d6-7489-11d0f-91b9-002264764cea"  #Full and very deep ultimate
 #config_id = "2d3f051c-55ba-11e3-bf43-406186ea4fc5"  #Host Discovery
 # config_id = "bbca7412-a950-11e3-9109-406186ea4fc5"  #System Discovery
@@ -99,7 +99,7 @@ print "[+] end report id creation "
 
 #wait for the scan to finish
 while True:
-    time.sleep(60)
+    time.sleep(30)
     cmd = ["omp", "--username", "admin", "--password", "admin", "-G"]
     p = subprocess.Popen(cmd,stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
     output, err = p.communicate()
