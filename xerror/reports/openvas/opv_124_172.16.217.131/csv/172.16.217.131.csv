@@ -1,0 +1,209 @@
+IP,Hostname,Port,Port Protocol,CVSS,Severity,Solution Type,NVT Name,Summary,Specific Result,NVT OID,CVEs,Task ID,Task Name,Timestamp,Result ID,Impact,Solution,Affected Software/OS,Vulnerability Insight,Vulnerability Detection Method,Product Detection Result,BIDs,CERTs,Other References
+172.16.217.131,,,,0.0,Log,"","CPE Inventory","This routine uses information collected by other routines about
+  CPE identities of operating systems, services and applications detected during the scan.
+
+  Note: Some CPEs for specific products might show up twice or more in the output. Background:
+
+  After a product got renamed or a specific vendor was acquired by another one it might happen that a
+  product gets a new CPE within the NVD CPE Dictionary but older entries are kept with the older CPE.","172.16.217.131|cpe:/o:microsoft:windows_xp",1.3.6.1.4.1.25623.1.0.810002,"NOCVE",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,061e2737-71e0-40d2-92d3-23d723bfef72,"","","","","
+Details:
+CPE Inventory
+(OID: 1.3.6.1.4.1.25623.1.0.810002)
+Version used: 2019-10-24T11:29:24+0000
+","","","","https://nvd.nist.gov/products/cpe"
+172.16.217.131,,135,tcp,0.0,Log,"Mitigation","DCE/RPC and MSRPC Services Enumeration","Distributed Computing Environment / Remote Procedure Calls (DCE/RPC) or MSRPC services running
+  on the remote host can be enumerated by connecting on port 135 and doing the appropriate queries.
+
+  The actual reporting takes place in the NVT 'DCE/RPC and MSRPC Services Enumeration Reporting'
+  (OID: 1.3.6.1.4.1.25623.1.0.10736)","A DCE endpoint resolution service seems to be running on this port.",1.3.6.1.4.1.25623.1.0.108044,"NOCVE",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,dbf89151-99f1-4781-8a6f-0db71bfe0409,"An attacker may use this fact to gain more knowledge
+  about the remote host.","Filter incoming traffic to this port.","","","
+Details:
+DCE/RPC and MSRPC Services Enumeration
+(OID: 1.3.6.1.4.1.25623.1.0.108044)
+Version used: 2020-03-05T09:07:58+0000
+","","","",""
+172.16.217.131,,,,0.0,Log,"","ICMP Timestamp Detection","The remote host responded to an ICMP timestamp request.
+  The Timestamp Reply is an ICMP message which replies to a Timestamp message. It consists
+  of the originating timestamp sent by the sender of the Timestamp as well as a receive
+  timestamp and a transmit timestamp. This information could theoretically be used to
+  exploit weak time-based random number generators in other services.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.103190,"CVE-1999-0524",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,6f8a7f92-502e-44a8-8a22-a6f4d8c4055a,"","","","","
+Details:
+ICMP Timestamp Detection
+(OID: 1.3.6.1.4.1.25623.1.0.103190)
+Version used: $Revision: 10411 $
+","","","CB-K15/1514, CB-K14/0632, DFN-CERT-2014-0658","http://www.ietf.org/rfc/rfc0792.txt"
+172.16.217.131,,445,tcp,0.0,Log,"","Microsoft SMB Signing Disabled","Checking for SMB signing is disabled.
+
+  The script logs in via smb, checks the SMB Negotiate Protocol response to
+  confirm SMB signing is disabled.","SMB signing is disabled on this host",1.3.6.1.4.1.25623.1.0.802726,"NOCVE",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,722ef2a8-19d5-4d13-b7d5-548038a46eab,"","","","","
+Details:
+Microsoft SMB Signing Disabled
+(OID: 1.3.6.1.4.1.25623.1.0.802726)
+Version used: $Revision: 11003 $
+","","","",""
+172.16.217.131,,445,tcp,9.3,High,"VendorFix","Microsoft Windows SMB Server Multiple Vulnerabilities-Remote (4013389)","This host is missing a critical security
+  update according to Microsoft Bulletin MS17-010.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.810676,"CVE-2017-0143, CVE-2017-0144, CVE-2017-0145, CVE-2017-0146, CVE-2017-0147, CVE-2017-0148",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,fb020576-98c4-4754-ad12-2f1f2e4f9cee,"Successful exploitation will allow remote
+  attackers to gain the ability to execute code on the target server, also
+  could lead to information disclosure from the server.","The vendor has released updates. Please see the references for more information.","- Microsoft Windows 10 x32/x64 Edition
+
+  - Microsoft Windows Server 2012 Edition
+
+  - Microsoft Windows Server 2016
+
+  - Microsoft Windows 8.1 x32/x64 Edition
+
+  - Microsoft Windows Server 2012 R2 Edition
+
+  - Microsoft Windows 7 x32/x64 Edition Service Pack 1
+
+  - Microsoft Windows Vista x32/x64 Edition Service Pack 2
+
+  - Microsoft Windows Server 2008 R2 x64 Edition Service Pack 1
+
+  - Microsoft Windows Server 2008 x32/x64 Edition Service Pack 2","Multiple flaws exist due to the way that the
+  Microsoft Server Message Block 1.0 (SMBv1) server handles certain requests.","Send the crafted SMB transaction request
+  with fid = 0 and check the response to confirm the vulnerability.
+Details:
+Microsoft Windows SMB Server Multiple Vulnerabilities-Remote (4013389)
+(OID: 1.3.6.1.4.1.25623.1.0.810676)
+Version used: 2019-12-20T12:42:55+0000
+","","96703,  96704,  96705,  96707,  96709,  96706","CB-K17/0435, DFN-CERT-2017-0448","https://support.microsoft.com/en-in/kb/4013078, https://technet.microsoft.com/library/security/MS17-010, https://github.com/rapid7/metasploit-framework/pull/8167/files"
+172.16.217.131,,445,tcp,10.0,High,"VendorFix","Microsoft Windows SMB Server NTLM Multiple Vulnerabilities (971468)","This host is missing a critical security update according to
+  Microsoft Bulletin MS10-012.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.902269,"CVE-2010-0020, CVE-2010-0021, CVE-2010-0022, CVE-2010-0231",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,4652139b-52cb-4183-9ffd-6b718b6895f2,"Successful exploitation will allow remote attackers to execute arbitrary
+  code or cause a denial of service or bypass the authentication mechanism via brute force technique.","The vendor has released updates. Please see the references for more information.","- Microsoft Windows 7
+
+  - Microsoft Windows 2000 Service Pack and prior
+
+  - Microsoft Windows XP Service Pack 3 and prior
+
+  - Microsoft Windows Vista Service Pack 2 and prior
+
+  - Microsoft Windows Server 2003 Service Pack 2 and prior
+
+  - Microsoft Windows Server 2008 Service Pack 2 and prior","- An input validation error exists while processing SMB requests and can
+  be exploited to cause a buffer overflow via a specially crafted SMB packet.
+
+  - An error exists in the SMB implementation while parsing SMB packets during
+  the Negotiate phase causing memory corruption via a specially crafted SMB packet.
+
+  - NULL pointer dereference error exists in SMB while verifying the 'share'
+  and 'servername' fields in SMB packets causing denial of service.
+
+  - A lack of cryptographic entropy when the SMB server generates challenges
+  during SMB NTLM authentication and can be exploited to bypass the authentication mechanism.","
+Details:
+Microsoft Windows SMB Server NTLM Multiple Vulnerabilities (971468)
+(OID: 1.3.6.1.4.1.25623.1.0.902269)
+Version used: 2020-01-07T09:06:32+0000
+","","","DFN-CERT-2010-0192","http://support.microsoft.com/kb/971468, http://www.vupen.com/english/advisories/2010/0345, https://docs.microsoft.com/en-us/security-updates/securitybulletins/2010/ms10-012"
+172.16.217.131,,,,0.0,Log,"","OS Detection Consolidation and Reporting","This script consolidates the OS information detected by several NVTs and tries to find the best matching OS.
+
+  Furthermore it reports all previously collected information leading to this best matching OS. It also reports possible additional information
+  which might help to improve the OS detection.
+
+  If any of this information is wrong or could be improved please consider to report these to the referenced community portal.","Best matching OS:
+
+OS:           Windows XP
+CPE:          cpe:/o:microsoft:windows_xp
+Found by NVT: 1.3.6.1.4.1.25623.1.0.102011 (SMB NativeLanMan)
+Concluded from SMB/Samba banner on port 445/tcp: 
+OS String:  Windows 5.1
+SMB String: Windows 2000 LAN Manager
+Setting key ""Host/runs_windows"" based on this information
+
+Other OS detections (in order of reliability):
+
+OS:           Microsoft Windows
+CPE:          cpe:/o:microsoft:windows
+Found by NVT: 1.3.6.1.4.1.25623.1.0.108044 (DCE/RPC and MSRPC Services Enumeration)
+Concluded from DCE/RPC and MSRPC Services Enumeration on port 135/tcp",1.3.6.1.4.1.25623.1.0.105937,"NOCVE",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,df20d6fa-b494-45df-9a28-a63e74774daa,"","","","","
+Details:
+OS Detection Consolidation and Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.105937)
+Version used: 2020-04-01T10:41:43+0000
+","","","","https://community.greenbone.net/c/vulnerability-tests"
+172.16.217.131,,,,10.0,High,"Mitigation","OS End Of Life Detection","OS End Of Life Detection.
+
+  The Operating System on the remote host has reached the end of life and should
+  not be used anymore.","The ""Windows XP"" Operating System on the remote host has reached the end of life.
+
+CPE:               cpe:/o:microsoft:windows_xp
+EOL date:          2014-04-08
+EOL info:          https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20Windows%20XP&Filter=FilterNO",1.3.6.1.4.1.25623.1.0.103674,"NOCVE",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,0d2b3442-a89c-4bd1-8cbd-5486932e0858,"","Upgrade the Operating System on the remote host
+  to a version which is still supported and receiving security updates by the vendor.","","","
+Details:
+OS End Of Life Detection
+(OID: 1.3.6.1.4.1.25623.1.0.103674)
+Version used: 2019-10-21T09:55:06+0000
+","Product: cpe:/o:microsoft:windows_xp
+Method: OS Detection Consolidation and Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.105937)
+","","",""
+172.16.217.131,,445,tcp,0.0,Log,"","SMB NativeLanMan","It is possible to extract OS, domain and SMB server information
+  from the Session Setup AndX Response packet which is generated during NTLM authentication.","Detected SMB workgroup: WORKGROUP
+Detected SMB server: Windows 2000 LAN Manager
+Detected OS: Windows 5.1",1.3.6.1.4.1.25623.1.0.102011,"NOCVE",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,fde382b3-f4b2-43e8-968f-ba2d944aa6c8,"","","","","
+Details:
+SMB NativeLanMan
+(OID: 1.3.6.1.4.1.25623.1.0.102011)
+Version used: 2019-12-12T09:38:57+0000
+","","","",""
+172.16.217.131,,445,tcp,0.0,Log,"","SMB Remote Version Detection","Detection of Server Message Block(SMB).
+
+  This script sends SMB Negotiation request and try to get the version from the
+  response.","Only SMBv1 is enabled on remote target",1.3.6.1.4.1.25623.1.0.807830,"NOCVE",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,2e48744d-89ca-4d08-a0f2-3642cfeecfa1,"","","","","
+Details:
+SMB Remote Version Detection
+(OID: 1.3.6.1.4.1.25623.1.0.807830)
+Version used: 2019-05-16T07:13:31+0000
+","","","",""
+172.16.217.131,,445,tcp,0.0,Log,"","SMB/CIFS Server Detection","This script detects whether port 445 and 139 are open and
+  if they are running a CIFS/SMB server.","A CIFS server is running on this port",1.3.6.1.4.1.25623.1.0.11011,"NOCVE",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,d237b01f-6d6c-4c56-8a3b-04c92cdfea69,"","","","","
+Details:
+SMB/CIFS Server Detection
+(OID: 1.3.6.1.4.1.25623.1.0.11011)
+Version used: $Revision: 13541 $
+","","","",""
+172.16.217.131,,139,tcp,0.0,Log,"","SMB/CIFS Server Detection","This script detects whether port 445 and 139 are open and
+  if they are running a CIFS/SMB server.","A SMB server is running on this port",1.3.6.1.4.1.25623.1.0.11011,"NOCVE",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,c84f7754-a6f3-45f2-bce4-897ece16fc6e,"","","","","
+Details:
+SMB/CIFS Server Detection
+(OID: 1.3.6.1.4.1.25623.1.0.11011)
+Version used: $Revision: 13541 $
+","","","",""
+172.16.217.131,,445,tcp,0.0,Log,"","SMBv1 enabled (Remote Check)","The host has enabled SMBv1 for the SMB Server.","SMBv1 is enabled for the SMB Server",1.3.6.1.4.1.25623.1.0.140151,"NOCVE",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,37f75c3c-4f49-4ded-9337-841a1bb939e7,"","","","","Checks if SMBv1 is enabled for the SMB Server based on the
+  information provided by the following VT:
+
+  - SMB Remote Version Detection (OID: 1.3.6.1.4.1.25623.1.0.807830).
+Details:
+SMBv1 enabled (Remote Check)
+(OID: 1.3.6.1.4.1.25623.1.0.140151)
+Version used: 2019-05-20T06:24:13+0000
+","","","","https://www.us-cert.gov/ncas/current-activity/2017/01/16/SMB-Security-Best-Practices, https://support.microsoft.com/en-us/kb/2696547, https://support.microsoft.com/en-us/kb/204279"
+172.16.217.131,,,,0.0,Log,"","Traceroute","A traceroute from the scanning server to the target system was
+  conducted. This traceroute is provided primarily for informational value only. In the vast
+  majority of cases, it does not represent a vulnerability. However, if the displayed traceroute
+  contains any private addresses that should not have been publicly visible, then you have an
+  issue you need to correct.","Here is the route from 172.16.217.1 to 172.16.217.131:
+
+172.16.217.1
+172.16.217.131",1.3.6.1.4.1.25623.1.0.51662,"NOCVE",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,2bab1caa-1100-4fc7-95b2-4938e14be643,"","Block unwanted packets from escaping your network.","","","
+Details:
+Traceroute
+(OID: 1.3.6.1.4.1.25623.1.0.51662)
+Version used: 2020-03-21T13:23:23+0000
+","","","",""
+172.16.217.131,,445,tcp,10.0,High,"VendorFix","Vulnerabilities in SMB Could Allow Remote Code Execution (958687) - Remote","This host is missing a critical security update according to
+  Microsoft Bulletin MS09-001.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.900233,"CVE-2008-4114, CVE-2008-4834, CVE-2008-4835",308d0f5a-69ea-4f26-87c4-38b54501ab94,"openvas_lib_scan_172.16.217.131_0FTptNZqVPz6nqYAXY8O",,bd176b36-4586-4a6b-bdfe-9f298192e2c6,"Successful exploitation could allow remote unauthenticated attackers
+  to cause denying the service by sending a specially crafted network message
+  to a system running the server service.","The vendor has released updates. Please see the references for more information.","- Microsoft Windows 2K Service Pack 4 and prior
+
+  - Microsoft Windows XP Service Pack 3 and prior
+
+  - Microsoft Windows 2003 Service Pack 2 and prior","The issue is due to the way Server Message Block (SMB) Protocol software
+  handles specially crafted SMB packets.","
+Details:
+Vulnerabilities in SMB Could Allow Remote Code Execution (958687) - Remote
+(OID: 1.3.6.1.4.1.25623.1.0.900233)
+Version used: 2020-01-07T09:06:32+0000
+","","31179","","http://www.milw0rm.com/exploits/6463, https://docs.microsoft.com/en-us/security-updates/securitybulletins/2009/ms09-001"

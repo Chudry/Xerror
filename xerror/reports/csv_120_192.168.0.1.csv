@@ -1,0 +1,4 @@
+IP,Host,os,Proto,Port,Service,Service_version,Product,Service FP,NSE Script ID,NSE Script Output,Notes
+192.168.0.1,,Linux 2.6.23 - 2.6.38,tcp,22,ssh,2012.55,Dropbear sshd,na,na,na
+192.168.0.1,,Linux 2.6.23 - 2.6.38,tcp,80,http,na,TP-LINK TD-W8968 http admin,na,na,na
+192.168.0.1,,Linux 2.6.23 - 2.6.38,tcp,1900,upnp,1.6.19,Portable SDK for UPnP devices,na,na,na

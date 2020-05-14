@@ -1,0 +1,178 @@
+      <!DOCTYPE html>
+
+      {% load staticfiles %}
+      <html lang="en">
+      <head>
+        <title>OpenVas RPC Connection</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--===============================================================================================-->  
+        <link rel="icon" type="image/png" href="{% static "loginform/images/icons/icon.ico" %}"/>
+      <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static "loginform/vendor/bootstrap/css/bootstrap.min.css" %}">
+      <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static "loginform/fonts/font-awesome-4.7.0/css/font-awesome.min.css" %}">
+      <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static "loginform/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" %}">
+      <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static "loginform/vendor/animate/animate.css" %}">
+      <!--===============================================================================================-->  
+        <link rel="stylesheet" type="text/css" href="{% static "loginform/vendor/css-hamburgers/hamburgers.min.css" %}">
+      <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static "loginform/vendor/select2/select2.min.css" %}">
+      <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static "loginform/css/util.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "loginform/css/main.css" %}">
+
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+      <!--===============================================================================================-->
+      <script src="{% static "js/jquery-2.2.4.min.js" %}" type="text/javascript"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.3/js/tether.min.js" type="text/javascript"></script>
+      <script src="{% static "js/bootstrap.min.js" %}" type="text/javascript"></script>
+      <script src="{% static "js/reconnecting-websocket.min.js" %}" type="text/javascript"></script>
+
+    <link href="{% static "css/stl2.css" %}" rel="stylesheet">
+    <link href="{% static "css/colors/green-dark.css" %}" rel="stylesheet">
+
+      <style type="text/css">
+      #bck{
+
+      background-image: url('{% static "loginform/images/img-01.jpg" %}');
+        /*background-attachment: fixed;*/
+        /*color:white;*/
+        /*background-repeat: no-repeat;*/
+      /*background-position: center ;*/
+      }
+      #def{
+
+
+
+
+      background-image: url('{% static "loginform/images/b.jpeg" %}');
+        /*background-attachment: fixed;*/
+        /*color:white;*/
+        /*background-repeat: no-repeat;*/
+      /*background-position: center ;*/
+      zoom:90%;
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </style>
+
+
+
+
+
+      </head>
+        <body id="def">
+        <div >
+        <div class="limiter" >
+          <div class="container-login100" id="bck">
+            <div class="wrap-login100 p-t-190 p-b-30">
+              <form class="login100-form validate-form"  method="POST"  action="{% url 'parsing:opv_rpc_connect' %}">
+                <div class="login10g0-form-avatar">
+
+                  <div style="color:white;margin-left: 100px;font-size: 57px;">
+                      <span style="font-size: 87px; color: orange; padding-right: 0px;margin-right: 0px; "> X</span>3rror<span style="writing-mode: vertical-rl;font-size: 28px;color: orange; "> ♠   &nbsp; &nbsp; &nbsp;    </span>
+                    
+                  </div>
+                  <!-- <img src="images/avatar-01.jpg" alt="AVATAR"> -->
+                </div>
+
+                <span class="login100-form-title p-t-20 p-b-45" style="color: white; font-size: 18px;">
+                  Connect <span style="color: orange; padding-right: 0px;margin-right: 0px; font-weight: 10;" >OpenVas </span> server 
+                </span>
+
+
+                <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+                  <input class="input100" type="text" name="opv_uname" id="opv_uname"placeholder="RPC server username" required>
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                    <i class="fa fa-user"></i>
+                  </span>
+                </div>
+
+                <div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+                  <input class="input100" type="password" name="opv_pass" id="opv_pass" placeholder="RPC Password" required>
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                    <i class="fa fa-lock"></i>
+                  </span>
+                </div>
+
+
+                <div class="wrap-input100 validate-input m-b-10" data-validate = "RPC server IP with port req">
+                  <input class="input100" type="opv_ip" name="opv_ip" id="opv_ip" placeholder="RPC SERVER IP" required>
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                  <i class="fa fa-server" ></i>
+                  </span>
+                </div>
+                <div class="container-login100-form-btn p-t-10"></div>
+
+                <div class="wrap-input100  m-b-10" ></div>
+                <div class="wrap-input100  m-b-10" >
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                    <br>
+
+                  <i class="fa fa-toggle-off"  style="font-size: 24px;"> 
+
+                 </i>  &nbsp; &nbsp; Https
+                  <br>
+                  </span>
+                </div>
+
+                <div class="wrap-input100  m-b-10" ></div>
+
+
+        
+                <!-- <div class="container-login100-form-btn p-t-10"></div> -->
+
+                <div class="container-login100-form-btn p-t-10">
+                  <button class="login100-form-btn">
+                    CONNECT
+                  </button>
+                </div>
+
+                <div class="text-center w-full p-t-25 p-b-230">
+                  <a href="#" class="txt1">
+                     Dash Board
+                  </a>
+                </div>
+
+                <div class="text-center w-full">
+                  <a class="txt1" href="#">
+      <i class="mdi mdi-server-security" style='font-size:26px'></i>
+                    RPC CONNECTION GUIDE
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+
+
+        <!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
+
+
+
+      </body>
+      </html>
