@@ -25,6 +25,10 @@ How to use this porject:
  
  You are goog to go 
  
+ This is xerror Beta version, soon complete version will be uploaded with complete explanation and detail of each step ...   
+ 
+ 
+ 
  
  
  
