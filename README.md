@@ -7,8 +7,24 @@ After completion of Xerror, it will will provides GUI and internally it supports
 Building in python as major. 
 
 
-This project build under supervision of Xerror Tech Solutions.
-
-
-For more details : 
-      Chudry  - exploitmee@protonmail.com
+How to use this porject: 
+ 1.Activate virtual enviroment by following command 
+      souce env/bin/activate
+ 2. Start redis server
+      service redis-server start
+ 3. start python srver 
+      1. cd xerror 
+      2. python mana.py runserver 
+ 4. start celery server 
+      1. cd xerror 
+      2. celery -A xerror worker -l info 
+ 5. start msfrpc server 
+      msfrpcd -P 123 -S -a 127.0.0.1
+ 6. start openvas server for default set OMP server credientials to admin@admin 127.0.0.1 9392 
+ 
+ 
+ You are goog to go 
+ 
+ 
+ 
+ 
