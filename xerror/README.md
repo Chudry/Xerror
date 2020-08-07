@@ -1,4 +1,3 @@
-# hicarser
 
 Ajax textfile load, parse(count symbols) with celery task, save result to db.  
 Show progressing on each step. 
