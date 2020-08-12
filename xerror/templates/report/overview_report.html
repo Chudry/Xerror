@@ -1,0 +1,306 @@
+  <!DOCTYPE html>
+
+  {% load staticfiles %}
+  <html lang="en">
+
+
+  <!-- Mirrored from www.wrappixel.com/demos/admin-templates/material-pro/dark/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 May 2020 12:26:28 GMT -->
+  <head>
+
+      <!-- <link rel="icon" type="image/png" sizes="16x16" href="https://www.wrappixel.com/demos/admin-templates/material-pro/assets/images/favicon.png"> -->
+      <title>Report Overview</title>
+
+
+       <!-- <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}" type="text/css" />  -->
+
+
+
+
+
+
+  <!--     <link href="% static "css/stl2.css" " rel="stylesheet">
+      <link href="% static "css/colors/green-dark.css" " rel="stylesheet">
+      <link href="% static "css/table.css" " rel="stylesheet">
+   -->
+  <!-- Latest compiled and minified CSS -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+
+
+      <!-- <link href="{{base}}/static/css/stl2.css" rel="stylesheet"> -->
+      <!-- <link href="{{base}}/static/ss/colors/green-dark.css"  rel="stylesheet"> -->
+      <!-- <link href="{{base}}/static/css/table.css" rel="stylesheet"> -->
+  <style>
+  #customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: solid red 5px;
+  }
+
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: #167F92;
+  }
+
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+  #customers tr:hover {background-color: #ddd;}
+
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #167F92;
+    color: white;
+    font-size: 22px;
+  }
+  .heading{
+    color: #167F92;
+  }
+
+  </style>
+  </head>
+
+
+
+
+
+  <body >
+
+
+
+
+  <div>
+
+      <!-- <img src="%   "landingpage.png" % " alt="Flowers in Chania" width="1163" height="1575"> -->
+      <img src=" {{base}}/static/landingpage.png" alt="Flowers in Chania" width="1163" height="1600">
+    
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+      <center>
+        <h1 class="heading"> Summary</h1>
+        <p style="text-align: justify;
+    text-justify: inter-word;"> This document reports on the results of an automatic security scan. The report first summarises the results found. Then, for host, the report describes every issue found. Please consider the advice given in description, in order to rectify the issue.
+
+  Vendor security updates are not trusted.
+
+  Overrides are off. Even when a result has an override, this report uses the actual threat of the result.
+
+  Information on overrides is included in the report.
+
+  Notes are included in the report.
+
+  This report might not show details of all issues that were found. Issues with the threat level "High" are not shown. Issues with the threat level "Medium" are not shown. Issues with the threat level "Low" are not shown. Issues with the threat level "Log" are not shown. Issues with the threat level "Debug" are not shown. Issues with the threat level "False Positive" are not shown. Only results with a minimum QoD of 70 are shown.
+
+  This report contains all 7 results selected by the filtering described above. Before filtering there were 8 results.
+
+  All dates are displayed using the timezone "Coordinated Universal Time", which is abbreviated "UTC".</p>
+      </center>
+    </div>
+  <br>
+  <br>
+  <h3><center> Testing Results For {{host_name }} Phase by phase</center></h3>
+  <h3><center> Date : {{date }} </center></h3>
+  
+
+<!-- 1 -->
+  <h1 class="heading" >1.Scanning  </h1>
+  <h2 style="margin-top: -15px;  "><small>Phase 1</small></h2>
+   
+  {% if host_id %}
+        {% if ro != 'file not found' %}
+                          {% if ro  %} <!-- check if has cve or not   -->
+<center>
+                                    <table class="table" id="customers" style="    border: 1px solid #ffb22b;" >
+
+                                        <thead > 
+                                              <tr>
+                                                <th>Port</th>
+                                                <th>Protocol</th>
+                                                <th>Service</th>
+                                                <th>Service Version</th>
+                                                <th>Product</th>
+                                              </tr>
+                                        </thead>
+                                        <tbody style="font-size: 20px;">
+                                                 {{ro|safe}}
+                                         </tbody>
+
+                                    </table></center>
+
+                          {% else %}
+                                    <h1><center>  
+
+                              </center>
+
+                              </h1>
+
+                          {% endif %} <!-- end no cve only logs  -->
+
+        {% endif %}  <!-- end file  not found  -->
+        {% else%}
+  <h1> No Open Port/Service Exist</h1> 
+           
+{% endif %} <!-- end check id host id not found  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 2 -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  <h1 class="heading" >2.Vulnerability Scan  </h1>
+  <h2 style="margin-top: -15px; "><small>Phase 2</small></h2>
+    
+{% if resul_table  %} <!-- check if has cve or not   -->
+
+         <table class="table" id="customers" style="    border: 1px solid #ffb22b;" >
+                                        <thead> 
+                                          <tr>
+
+                                            <th>Port</th>
+                                            <th>Protocol</th>
+                                            <th>CVSS</th>
+                                            <th>CVE</th>
+                                            <th>Severity</th>
+                                            <th>Vul Name</th>
+                                            <th>Impact</th>
+                                            <th>Summary</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                                 {{resul_table|safe}}
+                                         </tbody>
+
+           
+                                    </table>
+{% else%}
+  <h1><center> No Vulnerability Exist</center></h1>                                    
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 3 -->
+    <br>
+    <br>
+    <br>
+    <br>
+  <h1 class="heading" >3.Exploitation  </h1>
+  <h2 style="margin-top: -15px; "><small>Phase 3</small></h2>
+   
+<div>
+            {% if  mapped.items %}
+                    <table class="table" id="customers" style="    border: 1px solid #ffb22b;" >
+                        <thead><center>
+                            <tr>
+                                <th>Scan ID</th>
+                                <th>CVE </th>
+                                <th>Port </th>
+                                <th>Protocol </th>
+                                <th>Severity </th>
+                                <th> <center> Exploit</center>  </th>
+                            </tr>
+                        </center>
+                        </thead>
+
+
+                        <tbody style="font-size: 20px;">
+                            {% for key, value in mapped.items %}
+                                <tr>    
+                                    <td> {{host_id}}</td>
+                                    {% for j in value %}
+                                        <td>{{ j }}</td>
+                                    {% endfor %}
+
+                                <tr>
+                            {% endfor %}
+                                            </tbody>
+                                         </table>
+                            {% else %}
+                                        <h1> <center>
+                                            No Exploit For Vulnerability  
+                                        </center>
+                                        </h1>
+                            {% endif %}
+
+
+</div>
+
+
+
+
+<!-- 5 -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <br>
+ 
+   
+
+
+  <h2 style="margin-top: -15px;color:#167F92;; "><center>This report was automatically generated.</center></h2>
+
+
+
+         <footer class="footer">
+          <center>
+                ©2020 Xerror Pentest tool  by X3rror Tech Sol's
+            </center>
+            </footer>
+
+
+  </body>
+  </html>

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+<html lang="en">
+
+
+<!-- Mirrored from www.wrappixel.com/demos/admin-templates/material-pro/dark/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 May 2020 12:26:28 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="https://www.wrappixel.com/demos/admin-templates/material-pro/assets/images/favicon.png"> -->
+    <title>Reporting</title>
+
+
+     <!-- <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}" type="text/css" />  -->
+
+      <script src="{% static "js/jquery-2.2.4.min.js" %}" type="text/javascript"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.3/js/tether.min.js" type="text/javascript"></script>
+      <script src="{% static "js/bootstrap.min.js" %}" type="text/javascript"></script>
+      <script src="{% static "js/reconnecting-websocket.min.js" %}" type="text/javascript"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+    <link href="{% static "css/stl2.css" %}" rel="stylesheet">
+    <link href="{% static "css/colors/green-dark.css" %}" rel="stylesheet">
+    <link href="{% static "css/table.css" %}" rel="stylesheet">
+
+
+<style type="text/css">
+    
+#bck{
+
+background-image: url("{% static 'a.png' %}"),url("{% static 'b.jpeg' %}");
+  background-attachment: fixed;
+  /*color:white;*/
+  /*background-repeat: no-repeat;*/
+background-position: center ;
+}
+
+</style>
+
+</head>
+
+
+
+
+
+<body class="fix-header fix-sidebar card-no-border" cz-shortcut-listen="true">
+
+
+    <div id="main-wrapper">
+
+        <header class="topbar">
+            <nav class="">
+
+                <div class="top-navbar navbar navbar-header" style="background: #db9a1aeb;"><!-- ffb22b -->
+                    <a class="navbar-brand" href="index.html" style="margin-left:5px;">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+
+                            <!-- Light Logo icon -->
+                            <img src="{% static 'logo.png' %}" width="50px">
+                            </b>
+                            <!--End Logo icon -->
+                            <!-- Logo text --><span>
+              
+                                <!-- Light Logo text -->
+                                <img src="{% static 'logo_name.png' %}" class="light-logo" alt="homepage"></span>
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                
+            </nav>
+        </header>
+ 
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- User profile -->
+                <div class="user-profile" style="background: url(https://www.wrappixel.com/demos/admin-templates/material-pro/assets/images/background/user-info.jpg) no-repeat;">
+                    <!-- User profile image -->
+                    <div class="profile-img"> <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fa/COMSATS_Logo.svg/1200px-COMSATS_Logo.svg.png" alt="user"> </div>
+                    <!-- User profile text-->
+                    <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" ><span style="color: #f7b12c;">Comsats Lahore</span> </a>
+                        <div class="dropdown-menu animated flipInY"> <a href="#" class="dropdown-item"><i class="ti-user"></i>
+                                My Profile</a> <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My
+                                Balance</a>
+                            <a href="#" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
+                            <div class="dropdown-divider"></div> <a href="#" class="dropdown-item"><i class="ti-settings"></i>
+                                Account Setting</a>
+                            <div class="dropdown-divider"></div> <a href="l" class="dropdown-item"><i class="fa fa-power-off"></i>
+                                Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End User profile text-->
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="nav-small-cap">Pentesting Phases</li>
+                         <li> <a class="has-arrow waves-effect waves-light"  href="/" ><i   class="mdi mdi-view-dashboard"></i><span class="hide-menu" >Dashboard </span></a>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-light"  href="{% url 'parsing:nm_scan_index' %}" ><i     class="mdi mdi-account-search active"></i><span class="hide-menu" >Scanning </span></a>
+                            
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-light" href="{% url 'parsing:openvas_scan_index'  %}" ><i class="mdi mdi-barcode-scan"></i><span class="hide-menu">Vul Scanning</span></a>
+                           
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-biohazard"></i><span class="hide-menu">Exploitation</span></a>
+                           
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-laptop-windows"></i><span class="hide-menu">Sessions </span></a>
+                            
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-console"></i><span class="hide-menu">Shells</span></a>
+                            
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" style="color: #f7b12c;" href="{% url 'parsing:report_index'  %}" aria-expanded="false"><i style="color: #f7b12c;"  class="mdi mdi-file-document"></i><span class="hide-menu">Reports</span></a>
+                            
+                        </li>
+
+                       
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="hide-menu">Widgets<!--
+                        </li-->
+                        </span></a></li><li class="nav-devider"></li><a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                        <li class="nav-small-cap">EXTRA COMPONENTS</li>
+
+             
+                        </a><li><a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-web"></i> Web Scanning</a><a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-wifi"></i><span class="hide-menu">Wlan0 Testing</span></a>,
+                           
+                        </li>
+            
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+
+            <!-- Bottom points-->
+            <div class="sidebar-footer">
+                <!-- item--><a href="#" class="link" data-toggle="tooldtip" title="Settings"><i class="ti-settings"></i></a>
+
+                <!-- item--><a href="#" class="link" data-toggle="tooltidp" title="Email"><i class="mdi mdi-gmail"></i></a>
+
+                <!-- item--><a href="#" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+            </div>
+            <!-- End Bottom points-->
+        </aside>
+
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid" id="bck">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 col-12 align-self-center">
+                        <h3 class="text-themecolor">Overall Report  </h3>
+                        <ol class="breadcrumb">
+
+                        </ol>
+                    </div>
+                    <div class="col-md-7 col-12 align-self-center d-none d-md-block">
+                        <div class="d-flex mt-2 justify-content-end">
+                            <div class="d-flex mr-3 ml-2">
+                                <div class="chart-text mr-2">
+ 
+                                </div>
+                                <div class="spark-chart">
+                                    <div id="monthchart"></div>
+                                </div>
+                            </div>
+                            <div class="d-flex mr-3 ml-2">
+                                <div class="chart-text mr-2">
+   
+                                </div>
+                                <div class="spark-chart">
+                                    <div id="lastmonthchart"></div>
+                                </div>
+                            </div>
+                            <div class="">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-12">
+                    </div>
+
+                    <div class="col-lg-8 col-md-12">
+                        <div class="car d ca rd-inve rse car d-pri mary">
+                            <div class="card-body" style="background: rgba(0, 0, 0, 0.6);">
+                                <div class="d-flex">
+                                    <div class="mr-3 align-self-center">
+                                        <h1 class="text-white"><i class="ti-eye"></i></h1>
+                                    </div>
+                                    <div>
+                                        <h3 class="card-title">Refined Report</h3>
+                                        <h6 class="card-subtitle">Phase 6</h6>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10 align-self-center">
+
+{% if host_id %}
+        {% if ro != 'file not found' %}
+                            <table class="table" >
+                                <thead style="border-bottom: 2px solid orange;">
+                                    <tr>
+                                        <th> </th>
+                                        <th> Host Idd</th>
+                                        <th> RHOST IP</th>
+                                        <th> Host Name</th>
+                                        <th>OS</th>
+                                        <th>Mac Address</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td></td>
+
+                                         <td> {{host_id}}  </td>
+                                         <td> {{ip_addr}} </td>
+                                         {% if host %}
+                                                 <td> {{host}} </td>
+                                            {% else %}
+                                                 <td> Undetectable </td>
+                                        {% endif %}
+
+                                         <td> {{os}} </td>
+                                         <td> {{mac}} </td>
+                   
+ 
+            {% endif %}<!--End if file not found chedk   -->
+
+ {% endif %}  <!--  end if ip not in db -->
+              
+                                        </tr>
+                                </tbody>
+
+                            </table>
+
+
+
+
+                                    </div>
+                                    <div class="col-2 pb-3 pt-2 align-self-center">
+                                        <div class="usage chartist-chart" style="height:65px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-lg-2 col-md-12">
+                       <!--  <div class="card card-inverse card-success">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div class="mr-3 align-self-center">
+                                        <h1 class="text-white"><i class="icon-cloud-download"></i></h1>
+                                    </div>
+                                    <div>
+                                        <h3 class="card-title">Ajax Request Status</h3>
+                                        <h4 class="card-subtitle"> Notifications </h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    
+                                        <h4 class="font-weight-light text-white text-nowrap text-truncate">
+                                            
+                                            <ul id="notification_opv" style="color: black;">
+                                             </ul>
+                                        </h4>
+ 
+                                    <div class="col-4 align-self-center">
+                                    </div>
+                                    <div class="col-8 pb-3 pt-2 text-right">
+                                        <div class="spark-count" style="height:65px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+          
+                </div>
+<br>
+<br>
+<br>
+<br>
+
+                <!-- Row -->
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    
+                    <div class="col-lg-12 col-md-12">
+                        <div class="card-body card">
+                            <div class="">
+                                <div class="d-flex flex-wrap">
+                                    <div>
+                                        <h3 class="card-title">Completed Detailed Scan Report </h3>
+                                        <h6 class="card-subtitle">Detail Report </h6>
+                                    </div>
+                                    <div class="ml-auto align-self-center">
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item px-2">
+                                                <h6 class="text-success"><i class="fa fa-circle font-10 mr-2 "></i>Report</h6>
+                                            </li>
+                                            <li class="list-inline-item px-2">
+                                                <h6 class="text-info"><i class="fa fa-circle font-10 mr-2"></i> Error in reports  </h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-body ">
+ {% if host_id %}
+        {% if ro != 'file not found' %}
+                          {% if ro  %} <!-- check if has cve or not   -->
+<center>
+                                    <table class="responstable">
+
+                                        <thead> 
+                                              <tr>
+                                                <th>Port</th>
+                                                <th>Protocol</th>
+                                                <th>Service</th>
+                                                <th>Service Version</th>
+                                                <th>Product</th>
+                                              </tr>
+                                        </thead>
+                                        <tbody >
+                                                 {{ro|safe}}
+                                         </tbody>
+
+                                    </table></center>
+
+                          {% else %}
+                                    <h1><center>  
+<!--                                     <button class="btn btn-danger" style="padding: 8px; background-color: black; border: 1px solid orange; --darkreader-inline-bgcolor:#0f0e0c; --darkreader-inline-border-top:#ad8d51; --darkreader-inline-border-right:#ad8d51; --darkreader-inline-border-bottom:#ad8d51; --darkreader-inline-border-left:#ad8d51;" data-darkreader-inline-bgcolor="" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""> 
+
+                                        <a href="{% url 'parsing:openvas_report' host_id %}">
+                                             Raw Detail Report 
+                                        </a> 
+
+                                    </button>
+    -->
+
+
+                              </center>
+
+                              </h1>
+
+                          {% endif %} <!-- end no cve only logs  -->
+
+        {% endif %}  <!-- end file  not found  -->
+            {% if not os  %}
+            <h1> <center> File not scanning found </center></h1>
+            {% endif %}
+{% else %}  <!-- check id host id not found  -->
+  
+    <h1> <center> {{ro}} 121313</center></h1>
+
+
+{% endif %} <!-- end check id host id not found  -->
+
+
+
+                                <div class="d-flex flex-wrap">
+                                    <div>
+                                        <h3 class="card-title">Completed Vulnerability Scan Report </h3>
+                                        <h6 class="card-subtitle">Detail Report </h6>
+                                    </div>
+                                    <div class="ml-auto align-self-center">
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item px-2">
+                                                <h6 class="text-success"><i class="fa fa-circle font-10 mr-2 "></i>Report</h6>
+                                            </li>
+                                            <li class="list-inline-item px-2">
+                                                <h6 class="text-info"><i class="fa fa-circle font-10 mr-2"></i> Error in reports  </h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>   
+
+                            {% if resul_table  %} <!-- check if has cve or not   -->
+
+                                    <table class="responstable" style="    border: 1px solid #ffb22b;"> 
+                                        <thead> 
+                                          <tr>
+
+                                            <th>Port</th>
+                                            <th>Protocol</th>
+                                            <th>CVSS</th>
+                                            <th>CVE</th>
+                                            <th>Severity</th>
+                                            <th>Vul Name</th>
+                                            <th>Impact</th>
+                                            <th>Summary</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                                 {{resul_table|safe}}
+                                         </tbody>
+
+                                    </table>
+                          {% else %}
+                                      {% if vul_err == "file not found"  %}
+                                                <h1>
+                                                    <center> No Vulnability file found, Run Vulnerability scan
+
+
+                           
+                                                      </center> 
+                               
+                                                </h1>
+
+                                        {% else %}
+
+
+                                                {% if host_id %}
+                                         <h1><center> No Vulnability found only logs, Check out Detail Report 
+
+                                            <button class="btn btn-danger" style="padding: 8px; background-color: black; border: 1px solid orange; --darkreader-inline-bgcolor:#0f0e0c; --darkreader-inline-border-top:#ad8d51; --darkreader-inline-border-right:#ad8d51; --darkreader-inline-border-bottom:#ad8d51; --darkreader-inline-border-left:#ad8d51;" data-darkreader-inline-bgcolor="" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""> 
+
+                                                <a href="{% url 'parsing:openvas_report' host_id %}">
+                                                     Raw Detail Report 
+                                                </a> 
+                                                {% else %}
+                                                     <h1><center>Sorry Report is Corrupted or Modified by User {{host_id}} </center></h1>
+                                                {% endif %}
+
+                                            </button>
+
+                                      </center> 
+               
+                                      </h1>
+
+                                    {% endif %}
+                          {% endif %} <!-- end no cve only logs  -->
+
+           
+
+           <!-- sessions  -->
+                                <div class="d-flex flex-wrap">
+                                    <div>
+                                        <h3 class="card-title">Completed Sessions Report </h3>
+                                        <h6 class="card-subtitle">Detail Report </h6>
+                                    </div>
+                                    <div class="ml-auto align-self-center">
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item px-2">
+                                                <h6 class="text-success"><i class="fa fa-circle font-10 mr-2 "></i>Report</h6>
+                                            </li>
+                                            <li class="list-inline-item px-2">
+                                                <h6 class="text-info"><i class="fa fa-circle font-10 mr-2"></i> Error in reports  </h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div> 
+                            {%if session_tractor %}
+                                <table class="responstable" style="    border: 1px solid #ffb22b;"> 
+                                    <thead>
+                                        <tr>
+                                          <th>Host Id</th>
+                                          <th>RHOST</th>
+                                          <th>RPORT </th>
+                                          <th>CVE number</th>
+                                          <th>Exploit_Name</th>
+                                          <th>Payload Name</th>
+                                          <th>Exploit Status</th>
+                                          <th>Sessoin Id </th>
+                                          <th>Exploit UUID</th>
+                                          <th>Session Type</th>
+                                          <th>Tunnel Peer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            {% for k,v in sessions.items %}
+                                              <tr>
+                                                  <td>{{v.host_id}}</td>
+                                                  <td>{{v.host_name}}</td>
+                                                  <td>{{v.rport}}</td>
+                                                  <td>{{v.cve}}</td>
+                                                  <td>{{v.exploit_name}}</td>
+                                                  <td>{{v.payload_name}}</td>
+                                                  <td>{{v.exploited}}</td>
+                                                  <td>{{v.session_id}}</td>
+                                                  <td>{{v.exploit_uuid}}</td>
+                                                  <td>{{v.session_type}}</td>
+                                                  <td>{{v.tunnel_peer}}</td>
+
+                                                      <!-- {% for i,j in v.items %}
+                                                          <td>{{j}}</td>
+                                                        {% endfor %} -->
+                                              </tr>
+                                              {% endfor %}
+
+                                        
+                                    </tbody>
+
+                                </table>
+                            {% else %}
+                                <h1> <center>No sesson Found </center></h1>
+                            {% endif %}
+
+
+
+<!-- exploit -->
+                             <div class="d-flex flex-wrap">
+                                    <div>
+                                        <h3 class="card-title">Completed Exploitation Report </h3>
+                                        <h6 class="card-subtitle">Detail Report </h6>
+                                    </div>
+                                    <div class="ml-auto align-self-center">
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item px-2">
+                                                <h6 class="text-success"><i class="fa fa-circle font-10 mr-2 "></i>Report</h6>
+                                            </li>
+                                            <li class="list-inline-item px-2">
+                                                <h6 class="text-info"><i class="fa fa-circle font-10 mr-2"></i> Error in reports  </h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div> 
+                    <table >
+
+<div>
+            {% if  mapped.items %}
+                    <table class="responstable" style="    border: 1px solid #ffb22b;">
+                        <thead><center>
+                            <tr>
+                                <th>Scan ID</th>
+                                <th>CVE </th>
+                                <th>Port </th>
+                                <th>Protocol </th>
+                                <th>Severity </th>
+                                <th> <center> Exploit</center>  </th>
+                            </tr>
+                        </center>
+                        </thead>
+
+
+                        <tbody>
+                            {% for key, value in mapped.items %}
+                                <tr>    
+                                    <td> {{host_id}}</td>
+                                    {% for j in value %}
+                                        <td>{{ j }}</td>
+                                    {% endfor %}
+
+                                 <tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                            {% else %}
+                                        <h1>
+                                            <center> 
+                                            No Mapped Exploit  
+                                            </center>
+                                        </h1>
+                            {% endif %}
+
+
+</div>
+</tr></tr></tbody></table></div></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</tr>
+
+                                      </div>
+                                <div class="row text-center">
+                                    <div class="col-lg-4 col-md-4 mt-3">
+                                        <h1 class="mb-0 font-weight-light"></h1><small>Total Scan</small>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 mt-3">
+                                        <h1 class="mb-0 font-weight-light"></h1><small>Reporte Generated</small>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 mt-3">
+                                        <h1 class="mb-0 font-weight-light"></h1><small>Pending</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer">
+                © 2020 Xerror Pentest tool  by Xerror Tech Sol's
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+
+
+
+</body>
+</html>
