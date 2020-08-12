@@ -9,7 +9,7 @@ urlpatterns = [
     url(r'^$', views.index),
     url(r'^upload/$', views.upload),
 
- 
+# orignal 
 
 
 
@@ -18,12 +18,17 @@ urlpatterns = [
     url(r'^openvas_scan_index/$', views.openvas_scan_index,name="openvas_scan_index"),
     url(r'^openvas_ip_detailed/(?P<id>\d+)/$', views.openvas_ip_detailed,name="openvas_ip_detailed"),
     url(r'^openvas_ajx/$', views.openvas_scan_luncher),
+    url(r'^openvas_2nmap_ip_ajax/$', views.openvas_nmap2scan_luncher),
 
     url(r'^openvas_report/(?P<host_id>\d+)/$', views.vulnerability_report,name="openvas_report"),
+ 
 
     url(r'^nm_scan_index/$', views.nm_scan_index,name="nm_scan_index"),
     url(r'^nm_ip_detailed/(?P<id>\d+)/$', views.nm_ip_detailed,name="nm_ip_detailed"),
     url(r'^nmap_ajx/$', views.nm_scan_luncher),
+
+#     # url(r'^nm_ip_detail/(?P<id>\d+)/$', views.nm_ip_detail,name="nmdetail"),
+
 
 # # Metasoloit 
 
@@ -42,7 +47,17 @@ urlpatterns = [
 # connection 
 
     url(r'^msf_rpc_connect/$', views.msf_rpc_connect, name='msf_rpc_connect'),
-    url(r'^opv_rpc_connect/$', views.opv_rpc_connect, name='opv_rpc_connect'),
+    url(r'^msf_rpc_connect/$', views.msf_rpc_connect, name='msf_rpc_connect'),
+
+# Report
+
+    url(r'^report/$', views.report,name='report_index'),
+ 
+    url(r'^report_view/(?P<id>\d+)/$', views.report_view,name='report_view'),
+    url(r'^report_download/(?P<id>\d+)/$', views.report_download,name='report_download'),
+    url(r'^report_overview/(?P<id>\d+)/$', views.report_overview,name='report_overview'),
+
+
 
 ]
 
