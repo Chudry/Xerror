@@ -6,7 +6,7 @@ Xerror is an automated penetration tool , which will helps security professional
 Xerror provides GUI easy to use menu driven options.Iinternally it supports openVas for vulnerability scanning, Metasploit for exploitation and gives GUI based options after successful exploitation e.g Meterpreter sessoins.
 Building in python as major. 
 
-Xerror build using python2 as a primary language and Django2 as web framework along with, websockets(django channel) on celery server and Redis srver to achieve asynchronization. On front side it supports Djanog default template enging language which is jinga2 and jquery.   
+Xerror build on python2 as a primary language and Django2 as web framework along with, websockets(django channel) on celery server and Redis srver to achieve asynchronization. On front side it supports Djanog default template enging language which is jinga2 and jquery.   
 
 
 How to use this porject: </br>
