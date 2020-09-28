@@ -10,24 +10,24 @@ Xerror build using python2 as a primary language and Django2 as web framework al
 
 
 How to use this porject: </br>
- 1.Activate virtual enviroment by following command 
-      souce env/bin/activate
- 2. Start redis server
-      service redis-server start
- 3. start python srver 
+ 1.Activate virtual enviroment by following command </br>
+      souce env/bin/activate</br>
+ 2. Start redis server</br>
+      service redis-server start</br>
+ 3. start python srver </br>
       1. cd xerror 
-      2. python mana.py runserver 
- 4. start celery server 
-      1. cd xerror 
-      2. celery -A xerror worker -l info 
- 5. start msfrpc server 
-      msfrpcd -P 123 -S -a 127.0.0.1
- 6. start openvas server for default set OMP server credientials to admin@admin 127.0.0.1 9392 
+      2. python mana.py runserver </br>
+ 4. start celery server </br>
+      1. cd xerror </br>
+      2. celery -A xerror worker -l info </br>
+ 5. start msfrpc server </br>
+      msfrpcd -P 123 -S -a 127.0.0.1</br>
+ 6. start openvas server for default set OMP server credientials to admin@admin 127.0.0.1 9392 </br>
  
  
- You are goog to go 
+ You are goog to go </br>
  
- This is xerror Beta version, soon complete version will be uploaded with complete explanation and detail of each step ...   
+ This is xerror Beta version, soon complete version will be uploaded with complete explanation and detail of each step ...   </br>
  
  ![alt text](https://i.imgur.com/oJQH6ax.png)
  
@@ -48,7 +48,7 @@ How to use this porject: </br>
 
 ![alt text](https://i.imgur.com/tMo0B5S.png)
 
-![alt text](https://i.imgur.com/65JUi9y.png)
+![alt text](https://i.imgur.com/65</br>JUi9y.png)
  
  ![alt text](https://i.imgur.com/BIqlXr9.png)
  
@@ -64,3 +64,4 @@ How to use this porject: </br>
  
  
  
+</br>
