@@ -28,8 +28,35 @@ How to use this porject:
  This is xerror Beta version, soon complete version will be uploaded with complete explanation and detail of each step ...   
  
  ![alt text](https://i.imgur.com/oJQH6ax.png)
-![alt text](http://url/to/img.png)
+ 
+ 
+![alt text](https://i.imgur.com/RTyPiiZ.png)
 
+![alt text](https://i.imgur.com/yLMMNC2.png)
+
+
+![alt text](https://i.imgur.com/K7k2uRu.png)
+
+![alt text](https://i.imgur.com/dnDWm0O.png)
+
+![alt text](https://i.imgur.com/pn0evVH.png)
+
+
+
+
+![alt text](https://i.imgur.com/tMo0B5S.png)
+
+![alt text](https://i.imgur.com/65JUi9y.png)
+ 
+ ![alt text](https://i.imgur.com/BIqlXr9.png)
+ 
+ 
+ ![alt text](https://i.imgur.com/dV3NuRv.png)
+ 
+ ![alt text](https://i.imgur.com/W9bBejm.png)
+ 
+ 
+ 
  
  
  
