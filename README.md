@@ -48,7 +48,7 @@ How to use this porject: </br>
 
 ![alt text](https://i.imgur.com/tMo0B5S.png)
 
-![alt text](https://i.imgur.com/65</br>JUi9y.png)
+![alt text](https://i.imgur.com/65JUi9y.png)
  
  ![alt text](https://i.imgur.com/BIqlXr9.png)
  
