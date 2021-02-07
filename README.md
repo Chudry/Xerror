@@ -1,7 +1,7 @@
 # Xerror
 
 
-Xerror is an automated penetration tool , which will helps security professionals and non professionals to automate their pentesting tasks. Xerror will perform all tests and, at the end generate two reports for executives and analysts.
+Xerror is an automated penetration tool , which will help security professionals and non professionals to automate their pentesting tasks. Xerror will perform all tests and, at the end generate two reports for executives and analysts.
 
 Xerror provides GUI easy to use menu driven options.Iinternally it supports openVas for vulnerability scanning, Metasploit for exploitation and gives GUI based options after successful exploitation e.g Meterpreter sessoins.
 Building in python as major. 
@@ -22,7 +22,7 @@ How to use this porject: </br>
       2. celery -A xerror worker -l info </br>
  5. start msfrpc server for metasploit </br>
       msfrpcd -P 123 -S -a 127.0.0.1</br>
- 6. start openvas server for default set OMP server credientials to admin@admin 127.0.0.1 9392 </br>
+ 6. start openvas server and set OMP server credientials to admin@admin 127.0.0.1 9392 </br>
  
  
  You are goog to go </br>
