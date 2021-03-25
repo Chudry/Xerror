@@ -25,7 +25,7 @@ How to use this porject: </br>
  6. start openvas server and set OMP server credientials to admin@admin 127.0.0.1 9392 </br>
  
  
- You are goog to go </br>
+ You are good to go </br>
  
  This is xerror Beta version, soon complete version will be uploaded with complete explanation and detail of each step ...   </br>
  
