@@ -46,6 +46,6 @@ six==1.10.0
 Twisted==16.2.0
 txaio==2.5.1
 typing==3.10.0.0
-urllib3==1.25.6
+urllib3==1.26.5
 webencodings==0.5.1
 zope.interface==4.2.0
