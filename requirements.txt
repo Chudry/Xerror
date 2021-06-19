@@ -14,7 +14,7 @@ constantly==15.1.0
 cryptography==3.3.2
 daphne==0.14.2
 dbus-python==1.2.16
-Django==1.9.8
+Django==2.2.24
 enum34==1.1.10
 gunicorn==19.7.1
 hyperlink==21.0.0
