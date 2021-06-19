@@ -7,7 +7,7 @@ billiard==3.3.0.23
 celery==3.1.23
 channels==0.17.0
 daphne==0.14.2
-Django==1.11.29
+Django==2.2.24
 kombu==3.0.35
 msgpack-python==0.4.7
 pytz==2016.6.1
