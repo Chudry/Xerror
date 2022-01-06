@@ -4,7 +4,7 @@ asgi-redis==0.14.0
 asgiref==0.14.0
 autobahn==0.15.0
 billiard==3.3.0.23
-celery==3.1.23
+celery==5.2.2
 channels==0.17.0
 daphne==0.14.2
 Django==1.11.29
