@@ -22,7 +22,7 @@ idna==2.10
 incremental==21.3.0
 ipaddress==1.0.23
 kombu==3.0.35
-lxml==4.4.2
+lxml==4.9.1
 msgpack-python==0.4.7
 olefile==0.46
 openvas-lib==1.1.4
