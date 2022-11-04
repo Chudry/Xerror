@@ -43,7 +43,7 @@ redis==2.10.5
 reportlab==3.5.47
 service-identity==21.1.0
 six==1.10.0
-Twisted==16.2.0
+Twisted==22.10.0
 txaio==2.5.1
 typing==3.10.0.0
 urllib3==1.25.6
